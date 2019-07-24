@@ -1,0 +1,178 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ HTML5 display-role reset for older browsers 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+.gallery-text{
+font-family: 'Permanent Marker', cursive;
+font-variant: small-caps;
+display: flex;
+justify-content: center;
+text-align:center;
+font-size:50px;
+margin-top: 40px;
+margin-bottom: 20px;
+color:#4D57FF;
+    
+}
+
+img{
+    max-width:100%;
+/*
+    margin:0 auto;
+    width:300px;
+    height:300px;
+*/
+    position: relative;
+    transition:1s;
+    
+    
+
+    
+}
+
+#gallery{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap: 10px;
+    max-width:1000px;
+    margin:auto;}
+
+#bigpicture{
+    position: fixed;
+    top:0;
+    left:0;
+   background-color:rgba(192,192,192,0.5);
+    width:100%;
+    height:100%;
+     overflow: auto;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+
+  
+
+}
+.fullimage img{
+    max-width:90%;
+        max-height:60%;
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#gallery a{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+
+.animation { 
+  animation-name:bounce;
+  animation-duration: 0.3s;
+}
+
+@keyframes bounce {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+
+.mask:hover img {
+    background-color:black;
+    opacity: 0.3;
+}
+
+.mask h3{
+ text-align: center;
+    opacity:0;
+font-family: cursive;
+font-size:30px;
+color:darksalmon;}
+    
+.mask:hover h3{
+    opacity:1;
+    transform: translate(0,95px);
+    
+}
+
+body{
+    background-image:url(img/background.png);}
+    
+@media screen and (max-width: 1001px){
+        .gallery-text{
+            color:#E8CD74;}
+       
+    }
+@media screen and (max-width: 825px){
+   .gallery-text{
+       color:#F593EB;}
+}
+
+ 
